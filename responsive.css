@@ -1,0 +1,123 @@
+      .content {
+      	display: flex;
+      	flex-wrap: wrap;
+      }
+      .hero, .top-news, .scores, .weather, .recent-news {
+      	order: 10;
+      }
+      @media screen and (max-width: 549px) {
+            .snippet__description {
+                -webkit-line-clamp: 3;
+            }
+            .snippet__thumbnail {
+            display: none;
+            }
+            .snippet{
+                  display: flex;
+                  flex-wrap: wrap;
+            }
+            main p , a {
+                  font-size: 15px;
+            }
+            .loc{
+                  display: none;
+            }
+            #menu{
+                 margin-top: -5px; 
+            }
+      	.header__title {
+      		font-weight: 400;
+      		font-size: 2em;
+      		margin-top: 0.75em;
+      		display: inline-block;
+      		color: #212121;
+      	}
+      	.header__logo {
+      		height: 50px;
+      		margin-right: 1em;
+      		vertical-align: top;
+                  margin-top: 4px;
+      	}
+      	#menu {
+      		display: inline-block;
+      		position: absolute;
+      		right: 0px;
+      		padding: 1em;
+      	}
+      	.nav {
+      		z-index: 10;
+      		background-color: #fff;
+      		width: 300px;
+      		position: absolute;
+      		transform: translate(-300px, 0);
+      		transition: transform 0.3s ease;
+      	}
+      	nav.open{
+      		width: 100%;
+      		transform: translate(0, 0);
+      	}
+      }
+
+
+      @media screen and (min-width: 550px) {
+            .snippet__title {
+              font-weight: 500;
+              margin-bottom: 20px;
+            }
+            .snippet__thumbnail {
+                width: 30%;
+                height: 150px;
+                margin-right: 0;
+            }
+            .snippet__description {
+                -webkit-line-clamp: 3;
+            }
+            main p , a {
+                  font-size: 15px;
+            }
+      	#menu{
+      		display: none;
+      	}
+      	.hero {
+      		order: 0;
+      		width: 60%;
+      	}
+      	.weather {
+      		order: 1;
+      		width: 40%;
+      	}
+      }
+      @media screen and (min-width: 700px) {
+            .snippet__title {
+              font-weight: 500;
+              margin-bottom: 20px;
+            }
+            .snippet__description {
+                -webkit-line-clamp: 10;
+            }
+            main p , a {
+                  font-size: 15px;
+            }
+      	.hero {
+      		width: 50%;
+      	}
+      	.top-news {
+      		order: 1;
+      		width: 50%;
+      	}
+      	.scores {
+      		order: 2;
+      		width: 60%;
+      	}
+      	.weather {
+      		order: 3;
+      	}
+      }
+
+      @media screen and (min-width: 850px) {
+      	main, .header__inner, .nav, .content {
+      		width: 850px;
+      		margin-left: auto;
+      		margin-right: auto;
+      	}
+      }
